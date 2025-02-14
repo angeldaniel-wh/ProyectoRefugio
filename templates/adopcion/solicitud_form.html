@@ -1,0 +1,60 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+            <form method="post">
+                {% csrf_token %}
+
+                <div class="row justify-content-center">
+                    <div class="col-md-offset-2">
+                        <div class="form-group">
+                            <label for="{{ form2.nombre.name }}"> {{ form2.nombre.label }}</label>
+                            {{ form2.nombre }}
+                            {{ form2.nombre.errors }}
+                        </div>
+                        <div class="form-group">
+                            <label for="{{ form2.nombre.apellidos }}"> {{ form2.apellidos.label }}</label>
+                            {{ form2.apellidos }}
+                            {{ form2.apellidos.errors }}
+                        </div>
+                        <div class="form-group">
+                            <label for="{{ form2.edad.id_for_label }}"> {{ form2.edad.label }}</label>
+                            {{ form2.edad }}
+                            {{ form2.edad.errors }}
+                        </div>
+                        <div class="form-group">
+                            <label for="{{ form2.email.name }}"> {{ form2.email.label }}</label>
+                            {{ form2.email }}
+                            {{ form2.email.errors }}
+                        </div>
+                        <div class="form-group">
+                            <label for="{{ form2.telefono.name }}"> {{ form2.telefono.label }}</label>
+                            {{ form2.telefono }}
+                            {{ form2.telefono.errors }}
+                        </div>
+                        <div class="form-group">
+                            <label for="{{ form2.domicilio.name }}"> {{ form2.domicilio.label }}</label>
+                            {{ form2.domicilio }}
+                            {{ form.domicilio.errors }}
+                        </div>
+                        <div class="form-group">
+                            <label for="{{ form.numero_mascotas.name }}"> {{ form.numero_mascotas.label }}</label>
+                            {{ form.numero_mascotas }}
+                            {{ form.numero_mascotas.errors }}
+                        </div>
+                        <div class="form-group">
+                            <label for="{{ form.razones.name }}"> {{ form.razones.label }}</label>
+                            {{ form.razones }}
+                            {{ form.razones.errors }}
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" type="submit"> Guardar </button>
+            </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

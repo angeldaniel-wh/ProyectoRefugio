@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+    <form method="post">
+        {% csrf_token %}
+
+        {% if object %}
+            <h3> Desea eliminar el registro de {{ object.nombre }}?</h3>
+            <a class="btn btn-default" href="{% url 'mascota:class_mascota_listar' %}"> Cancelar</a>
+        {% else %}
+            <h3> Desea eliminar el registro de {{ mascota.nombre }}?</h3>
+            <a class="btn btn-default" href="{% url 'mascota:function_mascota_listar' %}"> Cancelar</a>
+        {% endif %}
+        <button class="btn btn-danger" type="submit">Sí, eliminar</button>
+
+{#        {% if object %}#}
+{#            <h3> Desea eliminar el registro de {{ object.nombre }}?</h3>#}
+{#            <a class="btn btn-default" href="{% url 'mascota:class_mascota_listar' %}"> Cancelar</a>#}
+{#        {% endif %}#}
+{#        {% if mascota %}#}
+{#            <h3> Desea eliminar el registro de {{ mascota.nombre }}?</h3>#}
+{#            <a class="btn btn-default" href="{% url 'mascota:function_mascota_listar' %}"> Cancelar</a>#}
+{#        {% endif %}#}
+{#            <button class="btn btn-danger" type="submit">Sí, eliminar</button>#}
+    </form>
+
+{%  endblock %}

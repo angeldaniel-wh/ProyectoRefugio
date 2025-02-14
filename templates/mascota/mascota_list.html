@@ -1,0 +1,76 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col">
+        <div class="table-responsive">
+            <table class="table table-bordered text-center">
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <td>Nombre</td>
+                        <td>Imagen</td>
+                        <td>Sexo</td>
+                        <td>Edad</td>
+                        <td>Fecha de rescato</td>
+                        <td>Adoptante</td>
+                    </tr>
+                </thead>
+                    <tbody>
+                        {% if object_list %}
+                            {% for mascota in object_list %}
+                                <tr>
+                                    <td>{{ mascota.id }}</td>
+                                    <td>{{ mascota.nombre }}</td>
+                                    {% if mascota.imagen %}
+                                        <td>
+                                           <a href="{% url 'mascota:class_mascota_editar' mascota.id %}" > <img src="{{ mascota.imagen.url }}" alt="{{ mascota.nombre }}" width="100"> </a>
+                                        </td>
+                                    {% else %}
+                                        <td> Imagen no disponible </td>
+                                    {% endif %}
+                                    <td>{{ mascota.sexo }}</td>
+                                    <td>{{ mascota.edad_aproximada }}</td>
+                                    <td>{{ mascota.fecha_rescate }}</td>
+                                    <td>{{ mascota.persona.nombre }} {{ mascota.persona.apellidos }}</td>
+                                    <td>
+                                        <a class="btn btn-primary" href="{% url 'mascota:class_mascota_editar' mascota.id %}">Editar</a>
+                                        <a class="btn btn-danger" href="{% url 'mascota:class_mascota_eliminar' mascota.id %}">Eliminar</a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        {% elif mascotas %}
+                            {% for mascota in mascotas %}
+                                <tr>
+                                    <td>{{ mascota.id }}</td>
+                                    <td>{{ mascota.nombre }}</td>
+                                    {% if mascota.imagen %}
+                                        <td>
+                                           <a href="{% url 'mascota:class_mascota_editar' mascota.id %}" > <img src="{{ mascota.imagen.url }}" alt="{{ mascota.nombre }}" width="100"> </a>
+                                        </td>
+                                    {% else %}
+                                        <td> Imagen no disponible </td>
+                                    {% endif %}
+                                    <td>{{ mascota.sexo }}</td>
+                                    <td>{{ mascota.edad_aproximada }}</td>
+                                    <td>{{ mascota.fecha_rescate }}</td>
+                                    <td>{{ mascota.persona.nombre }} {{ mascota.persona.apellidos }}</td>
+                                    <td>
+                                        <a class="btn btn-primary" href="{% url 'mascota:function_mascota_editar' mascota.id %}">Editar</a>
+                                        <a class="btn btn-danger" href="{% url 'mascota:function_mascota_eliminar' mascota.id %}">Eliminar</a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        {% else %}
+                            <tr>
+                                <td colspan="7">
+                                <h1>No hay registros de mascotas</h1>
+                            </td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+        </table>
+    </div>
+    </div>
+</div>
+{% endblock %}
