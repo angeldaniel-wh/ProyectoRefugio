@@ -22,86 +22,39 @@ Este proyecto fue realizado como parte de mi capacitación como **Programador Ba
 ## 📂 Estructura del Proyecto
 
 <pre>├── <font color="#12488B"><b>apps</b></font>
-│   ├── <font color="#12488B"><b>adopcion</b></font>
-│   │   ├── admin.py
-│   │   ├── apps.py
-│   │   ├── forms.py
-│   │   ├── __init__.py
-│   │   ├── <font color="#12488B"><b>migrations</b></font>
-│   │   │   ├── 0001_initial.py
-|   |   |   |
-│   │   │   ├── __init__.py
-│   │   │   └── <font color="#12488B"><b>__pycache__</b></font>
-│   │   │       ├── 0001_initial.cpython-37.pyc
-|   |   |
-│   │   │       └── __init__.cpython-37.pyc
-│   │   ├── models.py
-│   │   ├── <font color="#12488B"><b>__pycache__</b></font>
-│   │   │   ├── admin.cpython-37.pyc
-│   │   │   ├── forms.cpython-37.pyc
-│   │   │   ├── __init__.cpython-37.pyc
-│   │   │   ├── models.cpython-37.pyc
-│   │   │   ├── urls.cpython-37.pyc
-│   │   │   └── views.cpython-37.pyc
-│   │   ├── tests.py
-│   │   ├── urls.py
-│   │   └── views.py
-│   ├── __init__.py
-│   ├── <font color="#12488B"><b>mascota</b></font>
-│   │   ├── admin.py
-│   │   ├── apps.py
-│   │   ├── forms.py
-│   │   ├── __init__.py
-│   │   ├── <font color="#12488B"><b>migrations</b></font>
-│   │   │   ├── 0001_initial.py
-|   |   |
-│   │   │   ├── __init__.py
-│   │   │   └── <font color="#12488B"><b>__pycache__</b></font>
-│   │   │       ├── 0001_initial.cpython-37.pyc
-|   |   |
-│   │   ├── models.py
-│   │   ├── <font color="#12488B"><b>__pycache__</b></font>
-│   │   │   ├── admin.cpython-37.pyc
-│   │   │   ├── apps.cpython-37.pyc
-│   │   │   ├── forms.cpython-37.pyc
-│   │   │   ├── __init__.cpython-37.pyc
-│   │   │   ├── models.cpython-37.pyc
-│   │   │   ├── urls.cpython-37.pyc
-│   │   │   └── views.cpython-37.pyc
-│   │   ├── tests.py
-│   │   ├── urls.py
-│   │   └── views.py
-│   └── <font color="#12488B"><b>__pycache__</b></font>
-│       └── __init__.cpython-37.pyc
+│   ├── <font color="#12488B"><b>adopcion</b></font>
+│   │   ├── admin.py
+│   │   ├── forms.py
+│   │   ├── models.py
+│   │   ├── urls.py
+│   │   └── views.py
+│   ├── <font color="#12488B"><b>mascota</b></font>
+│   │   ├── admin.py
+│   │   ├── forms.py
+│   │   ├── models.py
+│   │   ├── urls.py
+│   │   └── views.py
 ├── db.sqlite3
 ├── <font color="#26A269"><b>manage.py</b></font>
 ├── <font color="#12488B"><b>media</b></font>
-│   ├── <font color="#A347BA"><b>default.png</b></font>
-│   └── <font color="#12488B"><b>mascota_imgs</b></font>
-|  
+│   └── <font color="#12488B"><b>mascota_imgs</b></font>
 ├── <font color="#12488B"><b>refugio</b></font>
-│   ├── __init__.py
-│   ├── <font color="#12488B"><b>__pycache__</b></font>
-│   │   ├── __init__.cpython-37.pyc
-│   │   ├── settings.cpython-37.pyc
-│   │   ├── urls.cpython-37.pyc
-│   │   └── wsgi.cpython-37.pyc
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
 ├── <font color="#12488B"><b>static</b></font>
-│   ├── <font color="#12488B"><b>css</b></font>
-│   │   ├── base.css
-│   │   └── bootstrap.min.css
-│   └── <font color="#12488B"><b>js</b></font>
-│       └── bootstrap.min.js
+│   ├── <font color="#12488B"><b>css</b></font>
+│   │   ├── base.css
+│   │   └── bootstrap.min.css
+│   └── <font color="#12488B"><b>js</b></font>
+│       └── bootstrap.min.js
 └── <font color="#12488B"><b>templates</b></font>
     ├── <font color="#12488B"><b>adopcion</b></font>
-    │   ├── solicitud_delete.html
-    │   ├── solicitud_form.html
-    │   └── solicitud_list.html
+    │   ├── solicitud_delete.html
+    │   ├── solicitud_form.html
+    │   └── solicitud_list.html
     ├── <font color="#12488B"><b>base</b></font>
-    │   └── base.html
+    │   └── base.html
     └── <font color="#12488B"><b>mascota</b></font>
         ├── index.html
         ├── mascota_delete.html
